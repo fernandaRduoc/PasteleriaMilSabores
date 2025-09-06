@@ -1,0 +1,274 @@
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  height: 100vh;
+  background: #FFF5E1;
+  color: #5D4037;
+}
+
+.icono-notificacion {
+  position: fixed;
+  top: 24px;
+  right: 32px;
+  z-index: 1000; /* superponer*/
+  font-size: 1.6rem;
+  color: #5D4037;
+  cursor: pointer;
+}
+
+.barra-lateral {
+  width: 150px;
+  background: #FFC0CB;
+  padding: 8px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  height: 98vh;
+}
+
+.barra-superior {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.logotipo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.logotipo img {
+  width: 80px;
+  height: auto;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.barra-lateral nav {
+  margin: 0;
+  padding: 0;
+}
+
+.barra-lateral ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.barra-lateral ul li a {
+  display: block;
+  padding: 10px 16px;
+  color: #5D4037;
+  text-decoration: none;
+  border-radius: 8px;
+  position: relative;
+  transition: background 0.2s;
+  font-size: 0.85rem;
+}
+
+.barra-lateral ul li a:hover {
+  background: rgba(255,255,255,0.5);
+}
+
+.barra-lateral ul li a.active {
+  background: #fff;
+  border-radius: 8px;
+}
+
+.barra-pie ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contenido {
+  flex: 1;
+  padding: 60px 20px 20px 20px;
+}
+
+.titulo-admin {
+  font-family: 'Pacifico', cursive;
+  margin-bottom: 0;
+}
+
+.subtitulo-admin {
+  font-family: 'Lato', sans-serif;
+  display: block;
+  margin-top: 0.01em;
+}
+
+.header {
+  background: #FFC0CB;
+  padding: 18px 50px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 24px;
+  border: 1px solid #bbb9b9;
+  position: relative;
+  overflow: visible;
+}
+
+.imagen-admin {
+  width: 350px;
+  height: auto;
+  border-radius: 16px;
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-60%);
+  z-index: 2;
+  background: none;
+}
+
+.texto-encabezado {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.tarjetas {
+  display: flex;
+  gap: 55px;
+  margin: 20px 0;
+  justify-content: flex-start;
+}
+
+.tarjeta {
+  flex: 1;
+  background: #F9B8C9;
+  padding: 14px 16px 14px 20px;
+  border-radius: 22px;
+  text-align: left;
+  border: 1px solid #bbb9b9;
+  position: relative;
+  min-height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 270px;
+}
+
+.tarjeta h3 {
+  font-family: 'Pacifico', cursive;
+  color: #fff;
+  font-size: 1.3rem;
+  margin: 0 0 8px 0;
+  font-weight: 400;
+}
+
+.tarjeta p {
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+
+.tarjeta button {
+  background: #fff;
+  color: #F9B8C9;
+  border: 1px solid #bbb9b9;
+  border-radius: 22px;
+  font-size: 0.85rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  padding: 4px 24px;
+  margin-top: 8px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 0 8px rgba(0,0,0,0.04);
+  display: inline-block;
+  align-self: flex-start;
+}
+
+/* Esta sección es para que la imágen del header en otros dispositivos no se vea mal */
+
+@media (max-width: 1100px) {
+  .imagen-admin {
+    width: 200px;
+    right: 10px;
+    top: 60%;
+    transform: translateY(-50%);
+  }
+  .header {
+    padding-right: 220px;
+  }
+}
+
+@media (max-width: 800px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px 20px 120px 20px;
+  }
+  .imagen-admin {
+    position: static;
+    width: 160px;
+    margin: 16px auto 0 auto;
+    display: block;
+    transform: none;
+  }
+}
+
+/* Editar el widget del calendario para que vaya acorde con la paleta
+de colores de la página */
+
+#calendario {
+  max-width: 200px;
+  font-size: 0.78rem;
+  margin: 6px 0 0 0;
+  padding: 0;
+  float: left;
+  clear: left;
+}
+
+#calendario .vanilla-calendar {
+  background: #fff !important;
+  color: #222 !important;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  border: 1px solid #e0e0e0;
+  padding: 6px 8px 16px 8px;
+}
+
+#calendario .vanilla-calendar-header {
+  background: #F9B8C9 !important;
+  color: #fff !important;
+  border-radius: 10px 10px 0 0;
+  font-family: 'Pacifico', cursive;
+  font-size: 1.1rem;
+  padding: 8px 0 8px 12px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+#calendario .vanilla-calendar-week,
+#calendario .vanilla-calendar-days {
+  background: #F9B8C9 !important;
+  color: #222 !important;
+}
+
+/* Los números del calendario*/
+#calendario .vanilla-calendar-day__btn {
+  background: #F9B8C9 !important;
+  color: #fff !important;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+#calendario .vanilla-calendar-day__btn:hover {
+  background: #fff !important;
+  color: #F9B8C9 !important;
+}
+
+#calendario .vanilla-calendar-day__btn_selected {
+  background: #FFC0CB !important;
+  color: #fff !important;
+  font-weight: bold;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo Producto - Pastelería Mil Sabores</title>
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/admin_nuevo_producto.css">
+    <link rel="stylesheet" href="css/admin_nuevo_usuario.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Notificación en la esquina superior derecha -->
+    <div class="icono-notificacion">
+        <i class="icon-bell-alt"></i>
+    </div>
+
+    <!-- Barra lateral -->
+    <aside class="barra-lateral">
+        <div class="barra-superior">
+            <div class="logotipo">
+                <img src="img/logo_pasteleria.png" alt="Logo Pastelería">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="admin.html"><i class="icon-home"></i> Inicio</a></li>
+                    <li><a href="gestion_productos.html" class="active"><i class="icon-birthday"></i> Productos</a></li>
+                    <li><a href="gestion_usuarios.html"><i class="icon-users"></i> Usuarios</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="barra-pie">
+            <ul>
+                <li><a href="#"><i class="icon-cog-outline"></i> Configuración</a></li>
+                <li><a href="#"><i class="icon-user"></i> Perfil</a></li>
+                <li><a href="#"><i class="icon-search"></i> Buscar</a></li>
+                <li><a href="#"><i class="icon-help-circled-alt"></i> Ayuda</a></li>
+                <li><a href="#"><i class="icon-user-circle"></i> ADMIN</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Formulario con estructura similar a "Nuevo Usuario" -->
+    <main class="contenido">
+        <h1 class="titulo-admin">Nuevo Producto</h1>
+        <section class="seccion-formulario">
+            <form class="formulario-usuario">
+                <div class="fila-formulario">
+                    <input type="text" placeholder="Código Producto" required>
+                    <input type="text" placeholder="Nombre" required>
+                </div>
+                <div class="fila-formulario">
+                    <textarea placeholder="Descripción Producto" required style="resize: none; height: 110px; width: 100%;"></textarea>
+                </div>
+                <div class="fila-formulario">
+                    <input type="number" placeholder="Precio $" required>
+                    <input type="number" placeholder="Stock" required>
+                    <input type="number" placeholder="Stock Crítico" required>
+                </div>
+                <div class="fila-formulario">
+                    <select required>
+                        <option value="" disabled selected>Categoría</option>
+                        <option>Pasteles</option>
+                        <option>Tortas</option>
+                        <option>Galletas</option>
+                    </select>
+                    <div class="imagen-input-group">
+                        <label class="imagen-label">
+                            <input type="file" id="imgInput" class="input-file">
+                            <input type="text" placeholder="Agregar Imagen" readonly class="input-text-imagen">
+                        </label>
+                        <button type="button" onclick="document.getElementById('imgInput').click();" class="btn-examinar">Examinar</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <div class="acciones-formulario">
+            <button type="submit" class="btn-guardar">Guardar</button>
+        </div>
+    </main>
+</body>
+</html>

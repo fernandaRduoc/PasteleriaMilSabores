@@ -1,0 +1,102 @@
+/* Estilos adicionales para el formulario de nuevo producto */
+
+.formulario-usuario textarea {
+  width: 100%;
+  min-height: 100px;
+  resize: none;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  font-size: 1.08rem;
+  font-family: 'Lato', sans-serif;
+  background: #fff;
+  color: #5D4037;
+  padding: 12px 14px;
+  outline: none;
+  transition: border 0.2s;
+  margin-bottom: 0;
+}
+
+.formulario-usuario textarea:focus {
+  border: 1.5px solid #F48FB1;
+}
+
+.formulario-usuario .grupo-archivo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.formulario-usuario .grupo-archivo input[type="file"] {
+  display: none;
+}
+
+.formulario-usuario .grupo-archivo input[type="text"] {
+  background: #fff;
+  color: #bbb;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 1.08rem;
+  font-family: 'Lato', sans-serif;
+  flex: 1;
+}
+
+.formulario-usuario .grupo-archivo button {
+  background: #aaa;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 18px;
+  font-size: 1rem;
+  font-family: 'Lato', sans-serif;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.formulario-usuario .grupo-archivo button:hover {
+  background: #888;
+}
+
+.imagen-input-group {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.imagen-label {
+    flex: 1;
+    display: flex;
+}
+
+.input-file {
+    display: none;
+}
+
+.input-text-imagen {
+    width: 100%;
+    background: #fff;
+    color: #bbb;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 1.08rem;
+    font-family: 'Lato', sans-serif;
+}
+
+.btn-examinar {
+    background: #aaa;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 18px;
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-examinar:hover {
+    background: #888;
+}

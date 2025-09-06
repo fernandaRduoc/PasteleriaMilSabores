@@ -1,0 +1,19 @@
+.barra-lateral ul li a {
+  display: block;
+  padding: 10px 16px;
+  color: #5D4037;
+  text-decoration: none;
+  border-radius: 8px;
+  position: relative;
+  transition: background 0.2s;
+  font-size: 0.85rem;
+}
+
+.barra-lateral ul li a:hover {
+  background: rgba(255,255,255,0.5);
+}
+
+.barra-lateral ul li a.active {
+  background: #fff;
+  border-radius: 8px;
+}

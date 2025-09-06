@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Admin - Pastelería Mil Sabores</title>
+  <link rel="stylesheet" href="css/fontello.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/build/vanilla-calendar.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Notificación en la esquina superior derecha -->
+  <div class="icono-notificacion">
+    <i class="icon-bell-alt"></i>
+  </div>
+
+  <!-- Barra lateral -->
+  <aside class="barra-lateral">
+    <div class="barra-superior">
+      <div class="logotipo">
+        <img src="img/logo_pasteleria.png" alt="Logo Pastelería">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="admin.html" class="active"><i class="icon-home"></i> Inicio</a></li>
+          <li><a href="gestion_productos.html"><i class="icon-birthday"></i> Productos</a></li>
+          <li><a href="gestion_usuarios.html"><i class="icon-users"></i> Usuarios</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="barra-pie">
+      <ul>
+        <!-- i es para indicar simplemente que es un icono -->
+        <li><a href="#"><i class="icon-cog-outline"></i> Configuración</a></li>
+        <li><a href="#"><i class="icon-user"></i> Perfil</a></li>
+        <li><a href="#"><i class="icon-search"></i> Buscar</a></li>
+        <li><a href="#"><i class="icon-help-circled-alt"></i> Ayuda</a></li>
+        <li><a href="#"><i class="icon-user-circle"></i> ADMIN</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Contenido principal -->
+  <main class="contenido">
+        <header class="header">
+        <div class="texto-encabezado">
+            <h1 class="titulo-admin">Hola, Admin</h1>
+            <p class="subtitulo-admin">Tu panel de control para endulzar sonrisas</p>
+        </div>
+        <img class="imagen-admin" src="img/admin-chef.png" alt="Admin Pastelera">
+        </header>
+
+    <section class="tarjetas">
+      <div class="tarjeta rosada">
+        <h3>Productos Registrados</h3>
+        <p>250 productos</p>
+        <button>Ver</button>
+      </div>
+      <div class="tarjeta rosada">
+        <h3>Usuarios Registrados</h3>
+        <p>9.580 usuarios</p>
+        <button>Ver</button>
+      </div>
+      <div class="tarjeta rosada">
+        <h3>Órdenes Activas</h3>
+        <p>20 órdenes</p>
+        <button>Ver</button>
+      </div>
+    </section>
+
+    <!-- Esta parte es para añadir un widget de calendario de Vanilla Calendar  -->
+    <section class="tablero">
+      <div class="calendario" id="calendario">
+          <h3><i class="icon-birthday"></i> Calendario</h3>
+          <p>[Calendario aquí]</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scripts para el calendario -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro/build/vanilla-calendar.min.js"></script>
+    <script>
+      const calendar = new VanillaCalendar('#calendario', {
+        settings: {
+          visibility: { weekend: true },
+          selection: { day: false } // solo mostrar, no seleccionar
+        }
+      });
+      calendar.init();
+    </script>
+</body>
+</html>
