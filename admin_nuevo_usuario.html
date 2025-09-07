@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="css/admin.css">
     <link rel="stylesheet" href="css/admin_nuevo_usuario.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.22.5/dist/sweetalert2.min.css
+    " rel="stylesheet">
 </head>
 <body>
     <!-- Notificación en la esquina superior derecha -->
@@ -46,36 +49,38 @@
         <section class="seccion-formulario">
             <form class="formulario-usuario">
                 <div class="fila-formulario">
-                    <input type="text" placeholder="Nombre" required>
-                    <input type="text" placeholder="Apellidos" required>
+                    <input type="text" id="txtNombre" placeholder="Nombre" required>
+                    <input type="text" id="txtApellidos" placeholder="Apellidos" required>
                 </div>
                 <div class="fila-formulario">
-                    <input type="date" placeholder="Fecha de Nacimiento" required>
-                    <input type="text" placeholder="RUT" required>
+                    <input type="date" id="txtFecha" placeholder="Fecha de Nacimiento" required>
+                    <input type="text" id="txtRut" placeholder="RUT" required>
                 </div>
                 <div class="fila-formulario">
-                    <input type="email" placeholder="Correo" required>
-                    <input type="tel" placeholder="Teléfono" required>
+                    <input type="email" id="txtCorreo" placeholder="Correo" required>
+                    <input type="tel" id="txtTelefono" placeholder="Teléfono" required>
                 </div>
-                <!-- Falta poner todas las regiones y comunas-->
+                <!-- Selects dependientes -->
                 <div class="fila-formulario">
-                    <select required>
+                    <select id="region" required>
                         <option value="" disabled selected>Región</option>
-                        <option>Región 1</option>
-                        <option>Región 2</option>
+                        <option value="metropolitana">Región Metropolitana</option>
+                        <option value="valparaiso">Región de Valparaíso</option>
+                        <option value="biobio">Región del Biobío</option>
+                        <option value="araucania">Región de La Araucanía</option>
+                        <option value="antofagasta">Región de Antofagasta</option>
+                        <option value="magallanes">Región de Magallanes</option>
                     </select>
-                    <select required>
+                    <select id="comuna" required>
                         <option value="" disabled selected>Comuna</option>
-                        <option>Comuna 1</option>
-                        <option>Comuna 2</option>
                     </select>
                 </div>
                 <div class="fila-formulario">
-                    <input type="text" placeholder="Dirección" required>
+                    <input type="text" id="txtDireccion" placeholder="Dirección" required>
                 </div>
                 <div class="fila-formulario">
-                    <input type="password" placeholder="Contraseña" required>
-                    <select required>
+                    <input type="password" id="txtPassword" placeholder="Contraseña" required>
+                    <select id="tipoUsuario" required>
                         <option value="" disabled selected>Tipo de Usuario</option>
                         <option>Administrador</option>
                         <option>Vendedor</option>
@@ -88,5 +93,12 @@
             <button type="submit" class="btn-guardar">Guardar</button>
         </div>
     </main>
+    <footer></footer>
+
+<script src="js/comunas.js"></script>
+<script src="js/usuarios.js"></script>
+<script src="js/validaciones_formulario.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.22.5/dist/sweetalert2.all.min.js"></script>
+
 </body>
 </html>
