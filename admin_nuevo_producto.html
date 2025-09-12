@@ -6,9 +6,10 @@
     <title>Nuevo Producto - Pastelería Mil Sabores</title>
     <link rel="stylesheet" href="css/fontello.css">
     <link rel="stylesheet" href="css/admin.css">
-    <link rel="stylesheet" href="css/admin_nuevo_producto.css">
     <link rel="stylesheet" href="css/admin_nuevo_usuario.css">
+    <link rel="stylesheet" href="css/admin_nuevo_producto.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.22.5/dist/sweetalert2.min.css" rel="stylesheet">
 </head>
 <body>
     <!-- Notificación en la esquina superior derecha -->
@@ -41,43 +42,61 @@
         </div>
     </aside>
 
-    <!-- Formulario con estructura similar a "Nuevo Usuario" -->
+    <!-- Formulario -->
     <main class="contenido">
         <h1 class="titulo-admin">Nuevo Producto</h1>
         <section class="seccion-formulario">
-            <form class="formulario-usuario">
+            <form class="formulario-usuario" id="formProducto">
                 <div class="fila-formulario">
-                    <input type="text" placeholder="Código Producto" required>
-                    <input type="text" placeholder="Nombre" required>
+                    <input type="text" id="txtCodigo" placeholder="Código Producto" required minlength="3">
+                    <input type="text" id="txtNombre" placeholder="Nombre" required maxlength="100">
                 </div>
                 <div class="fila-formulario">
-                    <textarea placeholder="Descripción Producto" required style="resize: none; height: 110px; width: 100%;"></textarea>
+                    <textarea id="txtDescripcion" placeholder="Descripción Producto (máx. 500)" maxlength="500"></textarea>
                 </div>
                 <div class="fila-formulario">
-                    <input type="number" placeholder="Precio $" required>
-                    <input type="number" placeholder="Stock" required>
-                    <input type="number" placeholder="Stock Crítico" required>
+                    <input type="number" id="txtPrecio" placeholder="Precio $" step="0.01" min="0" required>
+                    <input type="number" id="txtStock" placeholder="Stock" min="0" step="1" required>
+                    <input type="number" id="txtStockCritico" placeholder="Stock Crítico" min="0" step="1">
                 </div>
                 <div class="fila-formulario">
-                    <select required>
+                    <select id="categoria" required>
                         <option value="" disabled selected>Categoría</option>
-                        <option>Pasteles</option>
-                        <option>Tortas</option>
-                        <option>Galletas</option>
+                        <option value="tortas_cuadradas">Tortas Cuadradas</option>
+                        <option value="tortas_circulares">Tortas Circulares</option>
+                        <option value="postres_individuales">Postres Individuales</option>
+                        <option value="productos_sin_azucar">Productos Sin Azúcar</option>
+                        <option value="pasteleria_tradicional">Pastelería Tradicional</option>
+                        <option value="productos_sin_gluten">Productos sin gluten</option>
+                        <option value="productos_veganos">Productos Veganos/option>
+                        <option value="tortas_especiales">Tortas Especiales</option>
                     </select>
                     <div class="imagen-input-group">
                         <label class="imagen-label">
-                            <input type="file" id="imgInput" class="input-file">
-                            <input type="text" placeholder="Agregar Imagen" readonly class="input-text-imagen">
+                            <input type="file" id="imgInput" class="input-file" accept="image/*">
+                            <input type="text" id="txtImagen" placeholder="Agregar Imagen" readonly class="input-text-imagen">
                         </label>
                         <button type="button" onclick="document.getElementById('imgInput').click();" class="btn-examinar">Examinar</button>
                     </div>
                 </div>
             </form>
         </section>
+
         <div class="acciones-formulario">
-            <button type="submit" class="btn-guardar">Guardar</button>
+            <button type="button" class="btn-guardar" form="formProducto">Guardar</button>
         </div>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.22.5/dist/sweetalert2.all.min.js"></script>
+    <script src="js/productos.js"></script>
+    <script>
+        const imgInput = document.getElementById("imgInput");
+        if (imgInput) {
+            imgInput.addEventListener("change", function () {
+                const txt = document.getElementById("txtImagen");
+                txt.value = this.files && this.files[0] ? this.files[0].name : "";
+            });
+        }
+    </script>
 </body>
 </html>

@@ -40,18 +40,68 @@ function guardarUsuario(e) {
     var tipoUsuario = document.getElementById('tipoUsuario').value;
 
     
-    if (!nombre) return Swal.fire("Error", "El nombre es obligatorio", "error");
-    if (!apellidos) return Swal.fire("Error", "Los apellidos son obligatorios", "error");
-    if (!fechaNacimiento) return Swal.fire("Error", "La fecha de nacimiento es obligatoria", "error");
-    if (!correo) return Swal.fire("Error", "El correo es obligatorio", "error");
-    if (!telefono) return Swal.fire("Error", "El teléfono es obligatorio", "error");
-    if (!region) return Swal.fire("Error", "Debes seleccionar una región", "error");
-    if (!comuna) return Swal.fire("Error", "Debes seleccionar una comuna", "error");
-    if (!direccion) return Swal.fire("Error", "La dirección es obligatoria", "error");
-    if (!password) return Swal.fire("Error", "La contraseña es obligatoria", "error");
-    if (!tipoUsuario) return Swal.fire("Error", "Debes seleccionar un tipo de usuario", "error");
+    if (!nombre) {
+        Swal.fire("Error", "El nombre es obligatorio", "error");
+        return;
+    }
+    if (nombre.length > 50) {
+        Swal.fire("Error", "El nombre no puede superar los 50 caracteres", "error");
+        return;
+    }
+    if (!apellidos) {
+        Swal.fire("Error", "Los apellidos son obligatorios", "error");
+        return;
+    }
+    if (apellidos.length > 100) {
+        Swal.fire("Error", "Los apellidos no pueden superar los 100 caracteres", "error");
+        return;
+    }
+    if (!rut) {
+        Swal.fire("Error", "El RUN es obligatorio", "error");
+        return;
+    }
+    if (!validarRut(rut)) {
+        Swal.fire("Error", "El RUN ingresado no es válido", "error");
+        return;
+    }
+    if (!correo) {
+        Swal.fire("Error", "El correo es obligatorio", "error");
+        return;
+    }
+    if (correo.length > 100) {
+        Swal.fire("Error", "El correo no puede superar los 100 caracteres", "error");
+        return;
+    }
+    var correoRegex = /^[\w\.-]+@(duocuc\.cl|profesor\.duoc\.cl|gmail\.com)$/;
+    if (!correoRegex.test(correo)) {
+        Swal.fire("Error", "El correo debe ser @duocuc.cl, @profesor.duoc.cl o @gmail.com", "error");
+        return;
+    }
 
-    if (!validarRut()) return;
+    if (!region) {
+        Swal.fire("Error", "Debes seleccionar una región", "error");
+        return;
+    }
+    if (!comuna) {
+        Swal.fire("Error", "Debes seleccionar una comuna", "error");
+        return;
+    }
+    if (!direccion) {
+        Swal.fire("Error", "La dirección es obligatoria", "error");
+        return;
+    }
+    if (direccion.length > 300) {
+        Swal.fire("Error", "La dirección no puede superar los 300 caracteres", "error");
+        return;
+    }
+    if (!password) {
+        Swal.fire("Error", "La contraseña es obligatoria", "error");
+        return;
+    }
+    if (!tipoUsuario) {
+        Swal.fire("Error", "Debes seleccionar un tipo de usuario", "error");
+        return;
+    }
 
     var nuevoUsuario = new Usuario(
         generarId(),
@@ -86,7 +136,7 @@ function validarRut() {
     var largo = rut.length;
     console.log("Largo del RUT: " +largo);
     if(largo!=7 && largo!=8 && largo!=9 && largo!=10){
-        alert("RUT Incorrecto...");
+        Swal.fire("Error", "El RUN debe tener entre 7 y 10 caracteres", "error");
         return false;
     }
     if(largo == 9){ // trabajar con rut de por ejemplo 6000000-0
@@ -117,12 +167,11 @@ function validarRut() {
     console.log("Su dígito verificador es: " + dv);
     var dvUsuario = rut.slice(9,10).toUpperCase();
     if(dv == dvUsuario){
-        alert("OK");
         return true;
     }else{
-        alert("RUT Incorrecto...")
+        Swal.fire("Error", "RUT Incorrecto...", "error");
         return false;
     }
 }
 
-document.querySelector(".btn-guardar").addEventListener("click", guardarUsuario);
+document.querySelector(".btn-guardar").addEventListener("click", guardarUsuario);ñ
