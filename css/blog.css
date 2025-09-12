@@ -1,0 +1,114 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #fff3e0;
+  color: #5a2d2d;
+  padding: 20px;
+}
+
+/* Encabezado */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8bfc7;
+  padding: 15px 30px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header .logo img {
+  width: 60px;
+  height: auto;     
+  object-fit: contain;
+}
+
+header .logo h1 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #5a2d2d;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #8b4513;
+}
+
+.cart {
+  font-weight: bold;
+  color: #5a2d2d;
+}
+
+/* Blog */
+.titulo-blog {
+  text-align: left;
+  font-family: 'Pacifico', cursive;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.blog-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.blog-card {
+  background-color: #f9c5d5;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.blog-card h3 {
+  font-family: 'Pacifico', cursive;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.blog-card p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.blog-card button {
+  background-color: #fff3e0;
+  border: 2px solid #5a2d2d;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #5a2d2d;
+}
+
+.blog-card button:hover {
+  background-color: #5a2d2d;
+  color: #fff3e0;
+}
+
+/* Caso especial: tarjeta grande */
+.blog-card.large {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+}

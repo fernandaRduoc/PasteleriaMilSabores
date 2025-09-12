@@ -1,0 +1,135 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #FFF5E1; /* Fondo principal */
+  color: #5D4037; /* Texto principal */
+  padding: 20px;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFC0CB; /* Acento rosa suave */
+  padding: 15px 30px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header .logo img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+header .logo h1 {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #5D4037; /* Texto principal */
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #5D4037; /* Texto principal */
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #8B4513; /* Acento chocolate */
+}
+
+.cart {
+  font-weight: bold;
+  color: #5D4037; /* Texto principal */
+}
+
+/* Caja de contacto */
+.contact-box {
+  background-color: #FFC0CB; /* Acento rosa suave */
+  padding: 25px;
+  border-radius: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-box h2 {
+  font-family: 'Pacifico', cursive;
+  font-size: 22px;
+  background-color: #FFC0CB; /* Acento rosa suave */
+  padding: 5px 15px;
+  border-radius: 15px;
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #5D4037; /* Texto principal */
+}
+
+.contact-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-box label {
+  font-weight: bold;
+  color: #5D4037; /* Texto principal */
+}
+
+.contact-box input,
+.contact-box textarea {
+  border: 2px solid #5D4037; /* Texto principal */
+  border-radius: 5px;
+  padding: 8px;
+  outline: none;
+  background-color: #FFF5E1; /* Fondo principal */
+  font-family: 'Lato', sans-serif;
+  color: #5D4037; /* Texto principal */
+}
+
+.contact-box input:focus,
+.contact-box textarea:focus {
+  border-color: #8B4513; /* Acento chocolate */
+}
+
+.contact-box textarea {
+  resize: none;
+  min-height: 100px;
+  color: #5D4037; /* Texto principal */
+}
+
+.contact-box button {
+  background-color: #8B4513; /* Acento chocolate */
+  color: #FFF5E1; /* Texto sobre fondo oscuro */
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.contact-box button:hover {
+  background-color: #5D4037; /* Texto principal como hover */
+  color: #FFF5E1;
+}
+
+/* Texto secundario ejemplo */
+.contact-box p,
+.contact-box small {
+  color: #B0BEC5; /* Texto secundario gris claro */
+}
