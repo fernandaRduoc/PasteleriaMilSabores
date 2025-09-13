@@ -272,3 +272,36 @@ de colores de la página */
   color: #fff !important;
   font-weight: bold;
 }
+
+/* Forzar barra lateral a ocupar toda la altura */
+html, body {
+  height: 100%;
+}
+
+.barra-lateral {
+  width: 180px;              /* ajusta ancho fijo */
+  min-height: 100vh;         /* ocupa siempre el alto completo de la ventana */
+  background: #FFC0CB;
+  padding: 8px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* para que el pie se pegue abajo */
+  box-sizing: border-box;
+}
+
+/* Compactar elementos de la barra lateral */
+.barra-lateral ul li a {
+  padding: 6px 12px !important;   /* menos padding vertical */
+  font-size: 0.8rem !important;   /* texto un poco más chico */
+  line-height: 1.2 !important;    /* reduce espacio interno */
+}
+
+.barra-lateral ul li {
+  margin-bottom: 4px !important; /* menos separación entre items */
+}
+
+.barra-pie ul li a {
+  padding: 5px 12px !important;
+  font-size: 0.75rem !important;
+}
+

@@ -16,7 +16,7 @@ class Usuario {
     }
 }
 
-let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+var usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
 function generarId() {
     return usuarios.length > 0 ? usuarios[usuarios.length - 1].id + 1 : 1;
@@ -174,4 +174,5 @@ function validarRut() {
     }
 }
 
-document.querySelector(".btn-guardar").addEventListener("click", guardarUsuario);ñ
+document.querySelector(".btn-guardar").addEventListener("click", guardarUsuario);
+

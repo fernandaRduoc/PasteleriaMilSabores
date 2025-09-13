@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gestión de Usuarios - Pastelería Mil Sabores</title>
+  <title>Panel Admin - Gestión de Usuarios</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/gestion_usuarios.css">
+  <link rel="stylesheet" href="css/admin_nuevo_usuario.css">
   <link rel="stylesheet" href="css/fontello.css">
   <link rel="stylesheet" href="css/admin.css">
-  <link rel="stylesheet" href="css/gestion_usuarios.css">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <!-- Aquí simplemente copié la estructura de ADMIN y su CSS-->
 
   <!-- Notificación en la esquina superior derecha -->
   <div class="icono-notificacion">
@@ -34,6 +34,7 @@
     </div>
     <div class="barra-pie">
       <ul>
+        <!-- i es para indicar simplemente que es un icono -->
         <li><a href="#"><i class="icon-cog-outline"></i> Configuración</a></li>
         <li><a href="#"><i class="icon-user"></i> Perfil</a></li>
         <li><a href="#"><i class="icon-search"></i> Buscar</a></li>
@@ -43,8 +44,48 @@
     </div>
   </aside>
 
-  <!-- Contenido principal, aquí va la tabla que muestra a los usuarios -->
+
+  <!-- Tabla para visualizar los usuarios -->
+
+  <main class="contenido">
+    <h1 class="titulo-admin">Gestión de Usuarios</h1>
+
+    <!-- Botón para crear -->
+    <div class="mb-3 text-end">
+      <a href="admin_nuevo_usuario.html" class="btn btn-success">Nuevo Usuario</a>
+    </div>
+
+    <!-- Tabla con Bootstrap -->
+    <div class="table-responsive shadow-sm rounded">
+      <table class="table table-striped table-hover align-middle">
+        <thead class="table-light">
+          <tr>
+            <th scope="col"class="text-center">ID</th>
+            <th scope="col"class="text-center">Nombre</th>
+            <th scope="col"class="text-center">Apellidos</th>
+            <th scope="col"class="text-center">Fecha Nacimiento</th>
+            <th scope="col"class="text-center">RUT</th>
+            <th scope="col"class="text-center">Correo</th>
+            <th scope="col"class="text-center">Teléfono</th>
+            <th scope="col"class="text-center">Región</th>
+            <th scope="col"class="text-center">Comuna</th>
+            <th scope="col"class="text-center">Dirección</th>
+            <th scope="col"class="text-center">Password</th>
+            <th scope="col"class="text-center">Tipo Usuario</th>
+            <th scope="col"class="text-center">Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tablaUsuarios">
+          <!-- Se llena dinámicamente con JS -->
+        </tbody>
+      </table>
+    </div>
+  </main>
 
 
+
+    <footer></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/gestion_usuarios.js"></script>
 </body>
 </html>

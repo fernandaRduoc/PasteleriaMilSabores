@@ -90,10 +90,10 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.22.5/dist/sweetalert2.all.min.js"></script>
     <script src="js/productos.js"></script>
     <script>
-        const imgInput = document.getElementById("imgInput");
+        var imgInput = document.getElementById("imgInput");
         if (imgInput) {
             imgInput.addEventListener("change", function () {
-                const txt = document.getElementById("txtImagen");
+                var txt = document.getElementById("txtImagen");
                 txt.value = this.files && this.files[0] ? this.files[0].name : "";
             });
         }

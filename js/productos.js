@@ -12,7 +12,7 @@ class Producto {
     }
 }
 
-let productos = JSON.parse(localStorage.getItem("productos")) || [];
+var productos = JSON.parse(localStorage.getItem("productos")) || [];
 
 function generarId() {
     return productos.length > 0 ? productos[productos.length - 1].id + 1 : 1;

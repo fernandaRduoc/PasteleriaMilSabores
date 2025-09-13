@@ -3,16 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gestión de Usuarios - Pastelería Mil Sabores</title>
+  <title>Gestión de Productos - Pastelería Mil Sabores</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/fontello.css">
   <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="css/gestion_productos.css">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Aquí simplemente copié la estructura de ADMIN y su CSS-->
-
-  <!-- Notificación en la esquina superior derecha -->
   <div class="icono-notificacion">
     <i class="icon-bell-alt"></i>
   </div>
@@ -44,8 +43,42 @@
     </div>
   </aside>
 
-  <!-- Contenido principal, aquí va la tabla que muestra a los usuarios -->
+  <!-- Contenido principal, aquí va la tabla que muestra a los productos -->
+    <!-- Tabla para visualizar los usuarios -->
 
+  <main class="contenido>
+    <h1 class="titulo-admin">Gestión de Productos</h1>
 
+    <!-- Botón para crear -->
+    <div class="mb-3 text-end">
+      <a href="admin_nuevo_producto.html" class="btn btn-success">Nuevo Producto</a>
+    </div>
+
+    <!-- Tabla con Bootstrap -->
+    <div class="table-responsive shadow-sm rounded">
+      <table class="table table-striped table-hover align-middle">
+        <thead class="table-light">
+          <tr>
+            <th scope="col"class="text-center">Código Producto</th>
+            <th scope="col"class="text-center">Nombre</th>
+            <th scope="col"class="text-center">Descripción Producto</th>
+            <th scope="col"class="text-center">Precio</th>
+            <th scope="col"class="text-center">Stock</th>
+            <th scope="col"class="text-center">Stock Crítico</th>
+            <th scope="col"class="text-center">Categoría</th>
+            <th scope="col"class="text-center">Imagen</th>
+            <th scope="col"class="text-center">Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tablaProductos">
+          <!-- Se llena dinámicamente con JS -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+   
+<footer></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/gestion_productos.js"></script>
 </body>
 </html>
