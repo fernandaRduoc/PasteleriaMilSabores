@@ -17,7 +17,7 @@
 }
 
 .formulario-usuario textarea:focus {
-  border: 1.5px solid #F48FB1;
+  border: 1.5px solid #ffc0cb;
 }
 
 .formulario-usuario .grupo-archivo {

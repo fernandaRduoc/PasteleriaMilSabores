@@ -41,7 +41,7 @@ function eliminarUsuario(id) {
 
 // redirigir a la página de edición con el id del usuario
 function editarUsuario(id) {
-    window.location.href = `editar_usuario.html?id=${id}`;
+    window.location.href = `admin_editar_usuario.html?id=${id}`;
 }
 
 document.addEventListener("DOMContentLoaded", cargarUsuarios);

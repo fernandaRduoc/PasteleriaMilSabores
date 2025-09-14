@@ -11,6 +11,7 @@ function cargarProductos() {
         // rellena la fila con los datos del localStorage
         fila.innerHTML = `
           <td>${producto.id}</td>
+          <td>${producto.codigo}</td>
           <td>${producto.nombre}</td>
           <td>${producto.descripcion}</td>
           <td>${producto.precio}</td>
@@ -37,7 +38,7 @@ function eliminarProducto(id) {
 
 // redirigir a la página de edición con el id del producto
 function editarProducto(id) {
-    window.location.href = `editar_producto.html?id=${id}`;
+    window.location.href = `admin_editar_producto.html?id=${id}`;
 }
 
 document.addEventListener("DOMContentLoaded", cargarProductos);

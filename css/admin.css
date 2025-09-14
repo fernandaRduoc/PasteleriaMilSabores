@@ -3,8 +3,8 @@ body {
   font-family: 'Lato', sans-serif;
   display: flex;
   height: 100vh;
-  background: #FFF5E1;
-  color: #5D4037;
+  background: #fff5e1;
+  color: #683409;
 }
 
 .icono-notificacion {
@@ -13,13 +13,13 @@ body {
   right: 32px;
   z-index: 1000; /* superponer*/
   font-size: 1.6rem;
-  color: #5D4037;
+  color: #683409;
   cursor: pointer;
 }
 
 .barra-lateral {
   width: 150px;
-  background: #FFC0CB;
+  background: #ffc0cb;
   padding: 8px 20px 20px 20px;
   display: flex;
   flex-direction: column;
@@ -101,7 +101,7 @@ body {
 }
 
 .header {
-  background: #FFC0CB;
+  background: #ffc0cb;
   padding: 18px 50px;
   border-radius: 20px;
   display: flex;
@@ -142,7 +142,7 @@ body {
 
 .tarjeta {
   flex: 1;
-  background: #F9B8C9;
+  background: #ffc0cb;
   padding: 14px 16px 14px 20px;
   border-radius: 22px;
   text-align: left;
@@ -172,7 +172,7 @@ body {
 
 .tarjeta button {
   background: #fff;
-  color: #F9B8C9;
+  color: #ffc0cb;
   border: 1px solid #bbb9b9;
   border-radius: 22px;
   font-size: 0.85rem;
@@ -238,7 +238,7 @@ de colores de la página */
 }
 
 #calendario .vanilla-calendar-header {
-  background: #F9B8C9 !important;
+  background: #ffc0cb !important;
   color: #fff !important;
   border-radius: 10px 10px 0 0;
   font-family: 'Pacifico', cursive;
@@ -250,13 +250,13 @@ de colores de la página */
 
 #calendario .vanilla-calendar-week,
 #calendario .vanilla-calendar-days {
-  background: #F9B8C9 !important;
+  background: #ffc0cb !important;
   color: #222 !important;
 }
 
 /* Los números del calendario*/
 #calendario .vanilla-calendar-day__btn {
-  background: #F9B8C9 !important;
+  background: #ffc0cb !important;
   color: #fff !important;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
@@ -264,11 +264,11 @@ de colores de la página */
 
 #calendario .vanilla-calendar-day__btn:hover {
   background: #fff !important;
-  color: #F9B8C9 !important;
+  color: #ffc0cb !important;
 }
 
 #calendario .vanilla-calendar-day__btn_selected {
-  background: #FFC0CB !important;
+  background: #ffc0cb !important;
   color: #fff !important;
   font-weight: bold;
 }
@@ -281,7 +281,7 @@ html, body {
 .barra-lateral {
   width: 180px;              /* ajusta ancho fijo */
   min-height: 100vh;         /* ocupa siempre el alto completo de la ventana */
-  background: #FFC0CB;
+  background: #ffc0cb;
   padding: 8px 20px 20px 20px;
   display: flex;
   flex-direction: column;
