@@ -7,23 +7,29 @@ body {
   color: #683409;
 }
 
+html, body {
+  height: 100%;
+}
+
 .icono-notificacion {
-  position: fixed;
+  position: absolute;
   top: 24px;
   right: 32px;
-  z-index: 1000; /* superponer*/
+  z-index: 1000;
   font-size: 1.6rem;
   color: #683409;
   cursor: pointer;
 }
 
 .barra-lateral {
-  width: 150px;
+  width: 180px;              
+  min-height: 100vh;        
   background: #ffc0cb;
   padding: 8px 20px 20px 20px;
   display: flex;
   flex-direction: column;
-  height: 98vh;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 
 .barra-superior {
@@ -58,6 +64,10 @@ body {
   margin: 0;
 }
 
+.barra-lateral ul li {
+  margin-bottom: 4px !important;
+}
+
 .barra-lateral ul li a {
   display: block;
   padding: 10px 16px;
@@ -67,6 +77,9 @@ body {
   position: relative;
   transition: background 0.2s;
   font-size: 0.85rem;
+  padding: 6px 12px !important;  
+  font-size: 0.8rem !important;  
+  line-height: 1.2 !important; 
 }
 
 .barra-lateral ul li a:hover {
@@ -135,13 +148,16 @@ body {
 
 .tarjetas {
   display: flex;
-  gap: 55px;
-  margin: 20px 0;
-  justify-content: flex-start;
+  gap: 32px; 
+  margin: 20px auto;
+  justify-content: center;
+  max-width: 1100px; 
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .tarjeta {
-  flex: 1;
+  flex: 1 1 0;
   background: #ffc0cb;
   padding: 14px 16px 14px 20px;
   border-radius: 22px;
@@ -152,7 +168,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  max-width: 270px;
+  min-width: 355px;
 }
 
 .tarjeta h3 {
@@ -170,7 +186,7 @@ body {
   margin: 0 0 10px 0;
 }
 
-.tarjeta button {
+.tarjeta .btn-tarjeta {
   background: #fff;
   color: #ffc0cb;
   border: 1px solid #bbb9b9;
@@ -187,33 +203,90 @@ body {
   align-self: flex-start;
 }
 
-/* Esta sección es para que la imágen del header en otros dispositivos no se vea mal */
+.tablero-flex {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  align-items: flex-start;
+  margin-top: 18px;
+}
+.grafico_1 img {
+  display: block;
+  max-width: 580px;
+  width: 100%;
+}
 
-@media (max-width: 1100px) {
+.grafico_2 img {
+  display: block;
+  max-width: 280px;
+  width: 100%;
+}
+
+.btn-tarjeta {
+  text-decoration: none !important;
+}
+
+.btn-tarjeta:hover, .btn-tarjeta:focus {
+  text-decoration: none !important;
+}
+
+@media (max-width: 800px) {
   .imagen-admin {
-    width: 200px;
-    right: 10px;
-    top: 60%;
-    transform: translateY(-50%);
+    display: none !important;
   }
-  .header {
-    padding-right: 220px;
+}
+
+@media (max-width: 900px) {
+  .barra-lateral {
+    width: 125px !important;
+    min-height: 90vh !important;
+    height: 100vh !important;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+  }
+  .contenido {
+    margin-left: 125px;
   }
 }
 
 @media (max-width: 800px) {
   .header {
+    max-width: 60vw;
     flex-direction: column;
+    align-items: stretch;
+    padding: 16px 8px;
+    gap: 16px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+  }
+  .texto-encabezado {
     align-items: flex-start;
-    padding: 18px 20px 120px 20px;
+    text-align: left;
   }
-  .imagen-admin {
-    position: static;
-    width: 160px;
-    margin: 16px auto 0 auto;
-    display: block;
-    transform: none;
+  .tarjetas {
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 10px;
+    padding: 0 0 0 0;
+    margin: 5px 0;
   }
+  .tarjeta {
+    width: 100vw;
+    max-width: 290px;
+    min-width: unset;
+    border-radius: 14px;
+    padding: 12px 10px 12px 14px;
+    padding-bottom: 32px;
+  }
+
+  .tablero-flex {
+    flex-direction: column;
+    gap: 18px;
+    align-items: stretch;
+  }
+ 
 }
 
 /* Editar el widget del calendario para que vaya acorde con la paleta
@@ -273,35 +346,5 @@ de colores de la página */
   font-weight: bold;
 }
 
-/* Forzar barra lateral a ocupar toda la altura */
-html, body {
-  height: 100%;
-}
 
-.barra-lateral {
-  width: 180px;              /* ajusta ancho fijo */
-  min-height: 100vh;         /* ocupa siempre el alto completo de la ventana */
-  background: #ffc0cb;
-  padding: 8px 20px 20px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* para que el pie se pegue abajo */
-  box-sizing: border-box;
-}
-
-/* Compactar elementos de la barra lateral */
-.barra-lateral ul li a {
-  padding: 6px 12px !important;   /* menos padding vertical */
-  font-size: 0.8rem !important;   /* texto un poco más chico */
-  line-height: 1.2 !important;    /* reduce espacio interno */
-}
-
-.barra-lateral ul li {
-  margin-bottom: 4px !important; /* menos separación entre items */
-}
-
-.barra-pie ul li a {
-  padding: 5px 12px !important;
-  font-size: 0.75rem !important;
-}
 

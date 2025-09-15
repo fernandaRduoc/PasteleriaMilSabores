@@ -1,0 +1,46 @@
+.titulo-admin {
+  font-family: 'Pacifico', cursive;
+  color: #5D4037;
+  font-size: 2.6rem;
+  margin-top: 10px; 
+  margin-bottom: 14px;
+  text-align: left;
+  padding-left: 2px;
+  word-break: break-word;
+}
+
+.btn.btn-success {
+    margin-top: -100px; 
+    margin-right: 715px;
+    color: #fff;
+    background-color: #683409;
+}
+
+@media (max-width: 600px) {
+  .icono-notificacion {
+    display: none !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-productos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .titulo-admin {
+    font-size: 1.5rem;
+    padding-left: 10px !important;
+    margin-bottom: 0;
+  }
+  .btn.btn-success {
+    font-size: 0.8rem;
+    padding: 6px 13px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    margin-right: 1100px;
+    align-self: flex-start;
+  }
+}

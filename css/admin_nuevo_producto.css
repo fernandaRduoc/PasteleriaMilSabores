@@ -1,5 +1,32 @@
 /* Estilos adicionales para el formulario de nuevo producto */
 
+.fila-formulario {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+#txtDescripcion,
+.fila-formulario textarea#txtDescripcion {
+  width: 100% !important;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: block;
+  min-height: 110px;
+  resize: vertical;
+}
+
+.formulario-usuario {
+  overflow-x: hidden;
+}
+
+@media (max-width: 700px) {
+  .fila-formulario {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
 .formulario-usuario textarea {
   width: 100%;
   min-height: 100px;
@@ -99,4 +126,29 @@
 
 .btn-examinar:hover {
     background: #888;
+}
+
+@media (max-width: 900px) {
+  .titulo-admin {
+    font-size: 2rem;
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .titulo-admin {
+    font-size: 1.3rem;
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .acciones-formulario {
+    justify-content: center;
+  }
+  .btn-guardar {
+    margin-bottom: 24px;
+  }
 }

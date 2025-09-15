@@ -1,7 +1,7 @@
 body {
   background: #FFF5E1;
   font-family: 'Lato', sans-serif;
-  color: #5D4037;
+  color: #683409;
   margin: 0;
 }
 
@@ -12,7 +12,7 @@ body {
 
 .titulo-admin {
   font-family: 'Pacifico', cursive;
-  color: #5D4037;
+  color: #683409;
   font-size: 2.6rem;
   margin-top: 0;
   margin-bottom: 14px;
@@ -27,7 +27,7 @@ body {
 }
 
 .formulario-usuario {
-  background: #F9B8C9;
+  background: #ffc0cb;
   border-radius: 16px;
   padding: 32px 24px 24px 24px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
@@ -55,7 +55,7 @@ body {
   font-size: 1.08rem;
   font-family: 'Lato', sans-serif;
   background: #fff;
-  color: #5D4037;
+  color: #683409;
   outline: none;
   transition: border 0.2s;
   min-width: 0;
@@ -63,7 +63,7 @@ body {
 
 .fila-formulario input:focus,
 .fila-formulario select:focus {
-  border: 1.5px solid #F48FB1;
+  border: 1.5px solid #ffc0cb;
 }
 
 .fila-formulario input[type="date"] {
@@ -81,7 +81,7 @@ body {
 }
 
 .btn-guardar {
-  background: #7B4A21;
+  background: #683409;
   color: #fff;
   border: none;
   border-radius: 10px;
