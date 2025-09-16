@@ -38,4 +38,4 @@ Pruebas: navegadores como Chrome, Edge y Firefox.
 
 Belén Toloza – Administración y gestión de usuarios/productos.
 
-Fernanda [Apellido] – Ventas y catálogo de la tienda en línea.
+Fernanda River – Ventas y catálogo de la tienda en línea.
