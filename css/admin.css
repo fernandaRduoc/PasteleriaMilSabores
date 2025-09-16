@@ -100,42 +100,48 @@ html, body {
 .contenido {
   flex: 1;
   padding: 60px 20px 20px 20px;
+  display: block;          /* vuelve al flujo normal */
+  max-width: 1800px;       /* limita el ancho en pantallas grandes */
+  margin: 0 auto; 
+    
 }
 
 .titulo-admin {
   font-family: 'Pacifico', cursive;
   margin-bottom: 0;
+  font-size: 3rem;
 }
 
 .subtitulo-admin {
   font-family: 'Lato', sans-serif;
   display: block;
   margin-top: 0.01em;
+  font-size: 1.2rem;
 }
 
 .header {
   background: #ffc0cb;
-  padding: 18px 50px;
+  padding: 50px 80px;
   border-radius: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-  margin-bottom: 24px;
+  margin-bottom: 80px;
   border: 1px solid #bbb9b9;
   position: relative;
   overflow: visible;
 }
 
 .imagen-admin {
-  width: 350px;
+  width: 500px;
   height: auto;
   border-radius: 16px;
   position: absolute;
   top: 50%;
   right: 30px;
-  transform: translateY(-60%);
+  transform: translateY(-50%);
   z-index: 2;
   background: none;
 }
@@ -148,40 +154,42 @@ html, body {
 
 .tarjetas {
   display: flex;
-  gap: 32px; 
+  gap: 48px; 
   margin: 20px auto;
   justify-content: center;
   max-width: 1100px; 
   padding: 0;
   box-sizing: border-box;
+  margin: 50px 315px 40px;
+  margin-bottom: 80px;
 }
 
 .tarjeta {
-  flex: 1 1 0;
+  flex: 1;
   background: #ffc0cb;
-  padding: 14px 16px 14px 20px;
+  padding: 24px 20px 14px 20px;
   border-radius: 22px;
   text-align: left;
   border: 1px solid #bbb9b9;
   position: relative;
-  min-height: 90px;
+  min-height: 120px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  min-width: 355px;
+  min-width: 500px;
 }
 
 .tarjeta h3 {
   font-family: 'Pacifico', cursive;
   color: #fff;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   margin: 0 0 8px 0;
   font-weight: 400;
 }
 
 .tarjeta p {
   color: #fff;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   font-weight: bold;
   margin: 0 0 10px 0;
 }
@@ -191,7 +199,7 @@ html, body {
   color: #ffc0cb;
   border: 1px solid #bbb9b9;
   border-radius: 22px;
-  font-size: 0.85rem;
+  font-size: 1.2rem;
   font-family: 'Lato', sans-serif;
   font-weight: bold;
   padding: 4px 24px;
@@ -201,26 +209,34 @@ html, body {
   box-shadow: 0 0 8px rgba(0,0,0,0.04);
   display: inline-block;
   align-self: flex-start;
+  margin-bottom: 10px;
+  min-width: 0;
 }
 
 .tablero-flex {
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
   gap: 32px;
-  align-items: flex-start;
+  align-items: stretch;
   margin-top: 18px;
 }
+
 .grafico_1 img {
   display: block;
-  max-width: 580px;
-  width: 100%;
+  max-width: 850px;
+
+  height: auto;
 }
 
 .grafico_2 img {
   display: block;
-  max-width: 280px;
+  max-width: 600px;
   width: 100%;
+  height: 400px;
 }
+
+
 
 .btn-tarjeta {
   text-decoration: none !important;
@@ -293,12 +309,16 @@ html, body {
 de colores de la página */
 
 #calendario {
-  max-width: 200px;
-  font-size: 0.78rem;
+  max-width: 420px;   /* aumenta el ancho */
+  width: 100%;
+  min-width: 420px;   /* opcional, para asegurar ancho mínimo */
+  font-size: 0.95rem; /* aumenta el tamaño de fuente */
   margin: 6px 0 0 0;
   padding: 0;
   float: left;
   clear: left;
+  min-height: 340px;  /* aumenta el alto */
+  height: 340px; 
 }
 
 #calendario .vanilla-calendar {
