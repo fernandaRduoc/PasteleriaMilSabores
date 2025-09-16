@@ -1,108 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Fuente base: Lato */
 body {
-  font-family: 'Lato', sans-serif;
-  background: #fff8e7;
-  margin: 0;
-  padding: 0;
+    font-family: 'Lato', sans-serif;
+    background: #FFF5E1; /* Crema Pastel */
+    margin: 0;
+    padding: 0;
+    color: #5D4037; /* Marrón Oscuro */
 }
 
 /* Encabezados con Pacifico */
 h1, h2, h3 {
-  font-family: 'Pacifico', cursive;
-  color: #5a2d2d;
+    font-family: 'Pacifico', cursive;
+    color: #5D4037; /* Marrón Oscuro */
 }
 
 /* Header */
 header {
-  background: #ffcce0;
-  padding: 15px 25px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 20px;
+    background: #FFC0CB; /* Rosa Suave */
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Logo */
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .logo img {
-  width: 40px;
-  height: 40px;
+    width: 60px;
+    height: 60px;
 }
 
 /* Navegación */
-nav a:not(:last-child)::after {
-  content: "|";
-  text-decoration: none;
-  font-weight: bold;
-  margin: 0 10px;
-  color: #5a2d2d;
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #5D4037; /* Marrón Oscuro */
+    margin: 0 10px;
 }
 
-nav a:visited {
-  color: #5a2d2d;
+nav a:not(:last-child)::after {
+    content: "|";
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    color: #5D4037;
+}
+
+nav a:hover, nav a:visited {
+    color: #8B4513; /* Chocolate */
 }
 
 .carro {
-  color: #5a2d2d;
-  position: relative;
-  display: flex;
-  font-weight: bold;
-  align-items: center;
+    color: #5D4037;
+    position: relative;
+    display: flex;
+    font-weight: bold;
+    align-items: center;
 }
 
 .carrito img {
-  width: 30px;
-  height: 30px;
+    width: 30px;
+    height: 30px;
 }
 
 /* Productos */
 main {
-  padding: 20px;
-  text-align: center;
+    padding: 20px;
+    text-align: center;
+}
+
+h2.titulo-productos {
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
 .productos {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0 20px;
 }
 
 .card {
-  background: #ffcce0;
-  border-radius: 15px;
-  padding: 15px;
-  text-align: center;
-  width: 160px;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    background: #FFC0CB; /* Rosa Suave */
+    border-radius: 20px; /* Bordes muy redondeados */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
 }
 
 .card img {
-  width: 80px;
-  height: 80px;
+    width: 96px; /* Tamaño de íconos ajustado */
+    height: auto;
+}
+
+.card h3 {
+    font-family: 'Pacifico', cursive;
+    margin: 10px 0;
 }
 
 .precio {
-  font-size: 1rem;
-  font-weight: bold;
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #8B4513; /* Chocolate */
 }
 
 button {
-  background: #8b4513;
-  color: white;
-  border: none;
-  padding: 8px 15px;
-  border-radius: 15px;
-  cursor: pointer;
-  font-family: 'Lato', sans-serif;
+    background: #8B4513; /* Chocolate */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background: #5a2d2d;
+    background: #5D4037; /* Marrón Oscuro */
+}
+
+/* Estilos para los filtros */
+.filtros {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.filtros button {
+    background: #FFC0CB;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #5D4037;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.filtros button:hover {
+    background: #8B4513;
+    color: white;
 }

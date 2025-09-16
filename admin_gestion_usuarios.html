@@ -28,6 +28,7 @@
           <li><a href="admin.html"><i class="icon-home"></i> Inicio</a></li>
           <li><a href="admin_gestion_productos.html"><i class="icon-birthday"></i> Productos</a></li>
           <li><a href="admin_gestion_usuarios.html" class="active"><i class="icon-users"></i> Usuarios</a></li>
+          <li><a href="home.html"><i class="icon-shop"></i> Tienda</a></li>
         </ul>
       </nav>
     </div>
@@ -46,44 +47,38 @@
 
   <!-- Tabla para visualizar los usuarios -->
 
-  <main class="contenido">
+<main class="contenido">
+  <div class="header-productos">
     <h1 class="titulo-admin">Gestión de Usuarios</h1>
+    <a href="admin_nuevo_usuario.html" class="btn btn-success">Nuevo Usuario</a>
+  </div>
+  <!-- Tabla con Bootstrap -->
+  <div class="table-responsive shadow-sm rounded">
+    <table class="table table-striped table-hover align-middle">
+      <thead class="table-light">
+        <tr>
+          <th scope="col" class="text-center">ID</th>
+          <th scope="col" class="text-center">Nombre</th>
+          <th scope="col" class="text-center">Apellidos</th>
+          <th scope="col" class="text-center">Fecha Nacimiento</th>
+          <th scope="col" class="text-center">RUT</th>
+          <th scope="col" class="text-center">Correo</th>
+          <th scope="col" class="text-center">Teléfono</th>
+          <th scope="col" class="text-center">Región</th>
+          <th scope="col" class="text-center">Comuna</th>
+          <th scope="col" class="text-center">Dirección</th>
+          <th scope="col" class="text-center">Password</th>
+          <th scope="col" class="text-center">Tipo Usuario</th>
+          <th scope="col" class="text-center">Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tablaUsuarios">
+        <!-- Se llena dinámicamente con JS -->
+      </tbody>
+    </table>
+  </div>
+</main>
 
-    <!-- Botón para crear -->
-    <div class="mb-3 text-end">
-      <a href="admin_nuevo_usuario.html" class="btn btn-success">Nuevo Usuario</a>
-    </div>
-
-    <!-- Tabla con Bootstrap -->
-    <div class="table-responsive shadow-sm rounded">
-      <table class="table table-striped table-hover align-middle">
-        <thead class="table-light">
-          <tr>
-            <th scope="col"class="text-center">ID</th>
-            <th scope="col"class="text-center">Nombre</th>
-            <th scope="col"class="text-center">Apellidos</th>
-            <th scope="col"class="text-center">Fecha Nacimiento</th>
-            <th scope="col"class="text-center">RUT</th>
-            <th scope="col"class="text-center">Correo</th>
-            <th scope="col"class="text-center">Teléfono</th>
-            <th scope="col"class="text-center">Región</th>
-            <th scope="col"class="text-center">Comuna</th>
-            <th scope="col"class="text-center">Dirección</th>
-            <th scope="col"class="text-center">Password</th>
-            <th scope="col"class="text-center">Tipo Usuario</th>
-            <th scope="col"class="text-center">Acciones</th>
-          </tr>
-        </thead>
-        <tbody id="tablaUsuarios">
-          <!-- Se llena dinámicamente con JS -->
-        </tbody>
-      </table>
-    </div>
-  </main>
-
-
-
-    <footer></footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/admin_gestion_usuarios.js"></script>
 </body>

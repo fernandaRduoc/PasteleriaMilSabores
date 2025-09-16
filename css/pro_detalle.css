@@ -1,181 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&display=swap');
+
 /* Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Lato', sans-serif;
-  background-color: #fff3e0;
-  color: #5a2d2d;
-  padding: 20px;
+    font-family: 'Lato', sans-serif;
+    background-color: #FFF5E1; /* Crema Pastel */
+    color: #5D4037; /* Marrón Oscuro */
+    padding: 20px;
 }
 
 /* Header */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f8bfc7;
-  padding: 15px 30px;
-  border-radius: 20px;
-  margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFC0CB; /* Rosa Suave */
+    padding: 20px 50px;
+    border-radius: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 header .logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 header .logo img {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
 }
 
 header .logo h1 {
-  font-size: 18px;
-  line-height: 1.2;
-  font-weight: 700;
+    font-family: 'Pacifico', cursive;
+    font-size: 2em;
+    line-height: 1.2;
+    color: #5D4037;
 }
 
 nav a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #5a2d2d;
-  font-weight: bold;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #5D4037;
+    font-weight: bold;
 }
 
 nav a:hover {
-  color: #8b4513;
+    color: #8B4513; /* Chocolate */
 }
 
 .cart {
-  font-weight: bold;
-  color: #5a2d2d;
+    font-weight: bold;
+    color: #5D4037;
 }
 
 /* Breadcrumb */
 .breadcrumb {
-  font-size: 14px;
-  margin: 15px 0;
+    font-size: 14px;
+    margin: 15px 0;
+    padding-left: 20px;
 }
 
 .breadcrumb a {
-  text-decoration: none;
-  color: #5a2d2d;
+    text-decoration: none;
+    color: #5D4037; /* Marrón Oscuro */
 }
 
 .breadcrumb span {
-  color: #8b4513;
-  font-weight: bold;
+    color: #8B4513; /* Chocolate */
+    font-weight: bold;
 }
 
-/* Producto */
+/* Contenedor principal de la página de producto */
 .product-container {
-  display: flex;
-  gap: 30px;
-  margin-bottom: 40px;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #ffffff; /* Fondo blanco para el contenedor */
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .product-images {
-  flex: 1;
+    flex: 1;
 }
 
 .main-image {
-  width: 100%;
-  max-width: 350px;
-  border: 2px solid #d2a679;
-  border-radius: 10px;
+    width: 100%;
+    max-width: 350px;
+    border: 2px solid #5D4037; /* Marrón Oscuro */
+    border-radius: 10px;
 }
 
 .thumbnails {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
 }
 
 .thumbnails img {
-  width: 60px;
-  height: 60px;
-  border: 2px solid #d2a679;
-  border-radius: 5px;
-  cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #5D4037; /* Marrón Oscuro */
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .product-details {
-  flex: 2;
+    flex: 2;
 }
 
 .product-title {
-  font-family: 'Pacifico', cursive;
-  font-size: 28px;
-  margin-bottom: 5px;
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5em; /* Tamaño más grande */
+    margin-bottom: 5px;
+    color: #5D4037;
 }
 
 .product-subtitle {
-  font-style: italic;
-  margin-bottom: 10px;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #5D4037;
 }
 
 .product-price {
-  font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 15px;
+    font-size: 2em; /* Tamaño más grande */
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #8B4513; /* Chocolate */
 }
 
 .product-description {
-  font-size: 15px;
-  line-height: 1.4;
-  margin-bottom: 20px;
+    font-size: 1em;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    color: #5D4037;
 }
 
 .product-details label {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .product-details input {
-  width: 60px;
-  margin: 5px 0 15px;
-  padding: 5px;
-  border: 2px solid #5a2d2d;
-  border-radius: 5px;
-  background-color: #fff3e0;
+    width: 60px;
+    margin: 5px 0 15px;
+    padding: 5px;
+    border: 2px solid #5D4037; /* Marrón Oscuro */
+    border-radius: 5px;
+    background-color: #FFF5E1; /* Crema Pastel */
 }
 
 .btn-add {
-  background-color: #5a2d2d;
-  color: #fff3e0;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
+    background-color: #8B4513; /* Chocolate */
+    color: #FFF5E1; /* Crema Pastel */
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .btn-add:hover {
-  background-color: #8b4513;
+    background-color: #5D4037; /* Marrón Oscuro */
 }
 
 /* Productos similares */
 .similar-products h3 {
-  font-size: 18px;
-  margin-bottom: 15px;
+    font-family: 'Pacifico', cursive;
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #5D4037;
+    text-align: center;
 }
 
 .similar-container {
-  display: flex;
-  gap: 15px;
+    display: grid; /* Usar grid para un diseño más limpio */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
 }
 
 .similar-card {
-  flex: 1;
-  background-color: #f9c5d5;
-  border-radius: 10px;
-  text-align: center;
-  padding: 30px 10px;
-  font-weight: bold;
-  color: #5a2d2d;
+    background-color: #FFC0CB; /* Rosa Suave */
+    border-radius: 20px;
+    text-align: center;
+    padding: 30px 10px;
+    font-weight: bold;
+    color: #5D4037;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

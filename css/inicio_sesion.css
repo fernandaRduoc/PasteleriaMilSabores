@@ -1,125 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&display=swap');
+
 /* Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Lato', sans-serif;
-  background-color: #fff3e0;
-  color: #5a2d2d;
-  padding: 20px;
+    font-family: 'Lato', sans-serif;
+    background-color: #FFF5E1; /* Crema Pastel */
+    color: #5D4037; /* Marrón Oscuro */
+    padding: 20px;
 }
 
 /* Header */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f8bfc7;
-  padding: 15px 30px;
-  border-radius: 20px;
-  margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFC0CB; /* Rosa Suave */
+    padding: 20px 50px;
+    border-radius: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 header .logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 header .logo img {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
 }
 
 header .logo h1 {
-  font-size: 18px;
-  line-height: 1.2;
-  font-weight: 700;
+    font-family: 'Pacifico', cursive;
+    font-size: 2em;
+    line-height: 1.2;
+    color: #5D4037;
 }
 
 nav a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #5a2d2d;
-  font-weight: bold;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #5D4037;
+    font-weight: bold;
 }
 
 nav a:hover {
-  color: #8b4513;
+    color: #8B4513; /* Chocolate */
 }
 
 .cart {
-  font-weight: bold;
-  color: #5a2d2d;
+    font-weight: bold;
+    color: #5D4037;
 }
 
 /* Logo principal centrado */
 .logo-principal {
-  text-align: center;
-  margin: 20px 0;
+    text-align: center;
+    margin: 20px 0;
 }
 
 .logo-principal img {
-  width: 150px;
-  height: auto;
+    width: 150px;
+    height: auto;
 }
 
 /* Caja de login */
 .login-box {
-  background-color: #f9c5d5;
-  padding: 25px;
-  border-radius: 20px;
-  max-width: 400px;
-  margin: 0 auto;
-  text-align: left;
+    background-color: #FFC0CB; /* Rosa Suave */
+    padding: 40px; /* Más padding para que se vea más grande */
+    border-radius: 20px; /* Bordes muy redondeados */
+    max-width: 600px; /* Aumentar el ancho para que los campos no se vean tan apretados */
+    margin: 50px auto;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .login-box h2 {
-  font-family: 'Pacifico', cursive;
-  font-size: 22px;
-  background-color: #f8bfc7;
-  padding: 5px 15px;
-  border-radius: 15px;
-  display: inline-block;
-  margin-bottom: 15px;
+    font-family: 'Pacifico', cursive;
+    font-size: 2em; /* Título más grande */
+    background-color: transparent; /* Fondo transparente */
+    text-align: center;
+    margin-bottom: 30px; /* Espacio debajo del título */
+    padding: 0;
+    border-radius: 0;
 }
 
 .login-box form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre los campos */
 }
 
 .login-box label {
-  font-weight: bold;
+    font-weight: bold;
+    color: #5D4037;
 }
 
 .login-box input {
-  border: 2px solid #5a2d2d;
-  border-radius: 5px;
-  padding: 8px;
-  outline: none;
-  background-color: #fff3e0;
+    border: 2px solid #5D4037; /* Borde más oscuro */
+    border-radius: 10px; /* Bordes más redondeados */
+    padding: 10px;
+    outline: none;
+    background-color: #FFF5E1; /* Crema Pastel */
+    color: #5D4037;
 }
 
 .login-box input:focus {
-  border-color: #8b4513;
+    border-color: #8B4513; /* Chocolate */
 }
 
 .login-box button {
-  background-color: #5a2d2d;
-  color: #fff3e0;
-  padding: 10px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
+    background-color: #8B4513; /* Chocolate */
+    color: #FFF5E1; /* Crema Pastel */
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
 }
 
 .login-box button:hover {
-  background-color: #8b4513;
+    background-color: #5D4037; /* Marrón Oscuro */
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 5px;
+    display: block;
 }

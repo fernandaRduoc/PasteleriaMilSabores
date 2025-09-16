@@ -1,135 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&display=swap');
+
 /* Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Lato', sans-serif;
-  background-color: #FFF5E1; /* Fondo principal */
-  color: #5D4037; /* Texto principal */
-  padding: 20px;
+    font-family: 'Lato', sans-serif;
+    background-color: #FFF5E1; /* Crema Pastel */
+    color: #5D4037; /* Marrón Oscuro */
+    padding: 20px;
 }
 
 /* Header */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #FFC0CB; /* Acento rosa suave */
-  padding: 15px 30px;
-  border-radius: 20px;
-  margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFC0CB; /* Rosa Suave */
+    padding: 20px 50px;
+    border-radius: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 header .logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 header .logo img {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
 }
 
 header .logo h1 {
-  font-size: 18px;
-  line-height: 1.2;
-  font-weight: 700;
-  color: #5D4037; /* Texto principal */
+    font-family: 'Pacifico', cursive;
+    font-size: 2em;
+    line-height: 1.2;
+    color: #5D4037;
 }
 
 nav a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #5D4037; /* Texto principal */
-  font-weight: bold;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #5D4037;
+    font-weight: bold;
 }
 
 nav a:hover {
-  color: #8B4513; /* Acento chocolate */
+    color: #8B4513; /* Chocolate */
 }
 
 .cart {
-  font-weight: bold;
-  color: #5D4037; /* Texto principal */
+    font-weight: bold;
+    color: #5D4037;
 }
 
 /* Caja de contacto */
 .contact-box {
-  background-color: #FFC0CB; /* Acento rosa suave */
-  padding: 25px;
-  border-radius: 20px;
-  max-width: 500px;
-  margin: 0 auto;
-  text-align: left;
+    background-color: #FFC0CB; /* Rosa Suave */
+    padding: 40px; /* Más padding para que se vea más grande */
+    border-radius: 20px; /* Bordes muy redondeados */
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contact-box h2 {
-  font-family: 'Pacifico', cursive;
-  font-size: 22px;
-  background-color: #FFC0CB; /* Acento rosa suave */
-  padding: 5px 15px;
-  border-radius: 15px;
-  display: inline-block;
-  margin-bottom: 20px;
-  color: #5D4037; /* Texto principal */
+    font-family: 'Pacifico', cursive;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #5D4037;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    display: block;
 }
 
 .contact-box form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .contact-box label {
-  font-weight: bold;
-  color: #5D4037; /* Texto principal */
+    font-weight: bold;
+    color: #5D4037;
 }
 
 .contact-box input,
 .contact-box textarea {
-  border: 2px solid #5D4037; /* Texto principal */
-  border-radius: 5px;
-  padding: 8px;
-  outline: none;
-  background-color: #FFF5E1; /* Fondo principal */
-  font-family: 'Lato', sans-serif;
-  color: #5D4037; /* Texto principal */
+    border: 2px solid #5D4037;
+    border-radius: 10px;
+    padding: 10px;
+    outline: none;
+    background-color: #FFF5E1;
+    font-family: 'Lato', sans-serif;
+    color: #5D4037;
 }
 
 .contact-box input:focus,
 .contact-box textarea:focus {
-  border-color: #8B4513; /* Acento chocolate */
+    border-color: #8B4513;
 }
 
 .contact-box textarea {
-  resize: none;
-  min-height: 100px;
-  color: #5D4037; /* Texto principal */
+    resize: none;
+    min-height: 150px; /* Aumentado para más espacio de escritura */
 }
 
 .contact-box button {
-  background-color: #8B4513; /* Acento chocolate */
-  color: #FFF5E1; /* Texto sobre fondo oscuro */
-  padding: 10px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  margin-top: 15px;
+    background-color: #8B4513;
+    color: #FFF5E1;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
 }
 
 .contact-box button:hover {
-  background-color: #5D4037; /* Texto principal como hover */
-  color: #FFF5E1;
+    background-color: #5D4037;
 }
 
-/* Texto secundario ejemplo */
-.contact-box p,
-.contact-box small {
-  color: #B0BEC5; /* Texto secundario gris claro */
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: -8px;
+    margin-bottom: 5px;
+    display: block;
 }
